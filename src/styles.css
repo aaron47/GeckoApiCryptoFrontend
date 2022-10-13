@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* primary color: #118c4f, backgroundcolor: #f5f8ff */
+
+/* container: max-w-[1240px] m-auto */
+/* btn styles px-14px py-12px border border-[1px] solid primary bg-[#118c4f] text-[#fff] border-24px 4px text-5 font-semibold hover: */
+@layer components {
+  .primary {
+    @apply text-[#118c4f];
+  }
+
+  .btn {
+    @apply py-[14px] px-[32px] border-[2px] border-solid border-[#118c4f] bg-[#118c4f] text-white font-semibold hover:shadow-black/30  hover:shadow-md transition duration-200 ease-in-out rounded-tl-[24px] rounded-br-[24px] cursor-pointer text-xs md:text-2xl;
+  }
+
+  .container {
+    @apply max-w-[1240px] m-auto;
+  }
+
+  .hamburger {
+    @apply md:hidden sm:flex cursor-pointer;
+  }
+}
+
+@layer base {
+  input {
+    @apply px-[14px] py-[32px] border-[2px] border-solid border-[#118c4f] rounded-tl-[24px] rounded-br-[24px] bg-transparent text-base mr-[0.8rem];
+  }
+
+  li {
+    @apply cursor-pointer;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Poppins, "Helvetica Neue", sans-serif;
+}
+
+.polygon {
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+}
+
+.footer-polygon {
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+}

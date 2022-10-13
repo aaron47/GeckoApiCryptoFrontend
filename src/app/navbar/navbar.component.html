@@ -1,0 +1,49 @@
+<div
+  class="w-full h-[90px] border-solid border-b-[1px] bg-white sticky top-0 left-0 z-10"
+>
+  <div
+    class="container flex justify-between items-center h-full p-4 md:relative"
+  >
+    <h1 class="text-4xl md:text-5xl font-semibold">
+      De<span class="primary">Fi</span>
+    </h1>
+    <!-- <ul
+      class="absolute flex-col top-[90px] right-0 h-screen border-l-2 border-[#eee] border-solid z-10 bg-white transition duration-400 ease-in-out md:flex md:flex-row md:right-auto"
+    > -->
+    <ul
+      [ngStyle]="{ right: click ? '40%' : '-100%' }"
+      class="md:flex absolute top-[90px] -right-[100%] md:top-auto border-2 border-solid z-10 border-[#eee] md:border-none navbar transition duration-400 ease-in-out bg-white"
+    >
+      <li
+        class="text-xl font-semibold text-[#333] p-5 w-full border-b-2 border-[#eee] border-solid md:border-none"
+      >
+        <a routerLink="#">Home</a>
+      </li>
+
+      <li
+        class="text-xl font-semibold text-[#333] p-5 w-full border-b-2 border-[#eee] border-solid md:border-none"
+      >
+        <a routerLink="#">Featured</a>
+      </li>
+
+      <li
+        class="text-xl font-semibold text-[#333] p-5 w-full border-b-2 border-[#eee] border-solid md:border-none"
+      >
+        <a routerLink="#">Earn</a>
+      </li>
+
+      <li
+        class="text-xl font-semibold text-[#333] p-5 w-full border-b-2 border-[#eee] border-solid md:border-none"
+      >
+        <a routerLink="#">Contact</a>
+      </li>
+    </ul>
+    <div>
+      <button class="btn">Connect Wallet</button>
+    </div>
+
+    <button (click)="setHamburgerActive()" class="hamburger">
+      <mat-icon>{{ click ? "close" : "menu" }}</mat-icon>
+    </button>
+  </div>
+</div>
